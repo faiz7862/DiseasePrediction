@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseases Predictor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="unpkg.com_swiper@8.4.7_swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/static/Style.css">
+</head>
+<body>
+    <header class="site-header clearfix">
+        <nav>
+         <div class="logo">
+            <img src="/static/imghome/logo copy.png" alt="diseases" width="140px" height="90px"/>
+          
+         </div>
+         <div class="menu" style="width: 80%;"> 
+          <ul>
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('Check')}}">Check Disease</a></li>
+            <li><a href="{{url_for('About')}}">About us</a></li>
+            <li><a href="{{url_for('Feedback')}}">Feedback</a></li>
+            <li><a href="{{url_for('weather')}}">Weather Dashboard</a></li>
+        <li><a href="{{url_for('diseasse_analysis')}}">Disease Analysis</a></li>
+           <button class="signup_button" style="border-radius: 15%;background-color: aqua;font-size: medium;height: 40px;width: 120px;color: black;">
+            <a href="{{url_for('Signup')}}" style="text-decoration:none;" >Sign Up</a>
+          </button>
+          </ul>
+         </div>
+        </nav>
+        <section>
+         <div class="leftside"> 
+          <img src="/static/imghome/myriam-zilles-KltoLK6Mk-g-unsplash.jpg" alt="" id="img">
+         </div>
+         <div class="rightside"> 
+          <h1>Disease Prediction</h1>
+          <p>  A well-functioning healthcare system is critical to the economy and the well-being of humanity. 
+                 Between the world, we live in now and the world we lived in a few decades ago, there has been a 
+                 substantial amount of change. Everything has gotten more disorderly and unattractive. 
+               </p>
+          <button type="button">Know More</button>
+         </div>
+         
+        </section>
+       
+       </header>
+               <!--Our Service  section-->
+               <div class="container">
+               
+                <h1 class="heading">our services</h1>
+            
+                <div class="box-container">
+            
+                    <div class="box">
+                        <img src="/static/imghome/disease.jpg" alt="">
+                        <h3>Health Monitoring Devices: </h3>
+                        <p> Integrating data from wearable devices and health monitoring tools to track key indicators such as heart rate, blood pressure.</p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+            
+                    <div class="box">
+                        <img src="/static/imghome/imaages.jpeg" alt="">
+                        <h3>Electronic Health Records (EHRs)</h3>
+                        <p>LAnalyzing electronic health records to identify trends and patterns that may indicate the risk of certain diseases and other.</p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+            
+                    <div class="box">
+                        <img src="/static/imghome/images.jpeg" alt="">
+                        <h3>Population Health Analytics</h3>
+                        <p> Examining data at a population level to identify trends and potential outbreaks of infectious diseases. throw the population</p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+                         <!--Our Service  section-->
+                         <div class="container">
+               
+                          <h1 class="heading">Government Health Care Scheame</h1>
+                      
+                          <div class="box-container">
+                      
+                              <div class="box">
+                                  <img src="static\img\Ayushman_Bharat_logo.png" alt="">
+                                  <h3>Ayushman Bharat: </h3>
+                                  <p> Ayushman Bharat, a flagship scheme of Government of India, was launched as recommended by the National Health Policy 2017, to achieve the vision of Universal Health Coverage (UHC). </p>
+                                  <a href="https://ayushmanbharat.mp.gov.in/index.php?/how-to-avail" target="_blank"class="btn">read more</a>
+                              </div>
+                      
+                              <div class="box">
+                                  <img src="static\img\download.png" alt="">
+                                  <h3>Mukhyamantri Chiranjeevi Yojana</h3>
+                                  <p>The Chiranjeevi Health Insurance Scheme, introduced by the Rajasthan government, is a crucial healthcare initiative that extends cashless medical insurance of up to Rs. 5 Lakh to every family residing in Rajasthan.</p>
+                                  <a href="https://chiranjeevi.rajasthan.gov.in/#/home" target="_blank"class="btn">read more</a>
+                              </div>
+                      
+                              <div class="box">
+                                  <img src="static\img\bihar.png" alt="">
+                                  <h3>Health Department, Government of Bihar</h3>
+                                  <p>Health Department is working towards providing health care “to the last household and to the last person of the state”, i.e., Health Department is totally committed in building healthy people
+                                    .</p>
+                                  <a href="https://state.bihar.gov.in/health/CitizenHome.html" target="_blank" class="btn">read more</a>
+                              </div>
+                      
+                          </div>
+                      
+                      </div>
+
+
+            <!--Timeline section-->
+
+            <section class="timeline-section">
+                
+
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2015</div>
+                        <div class="timeline-content">
+                            <h3>Diseases cases</h3>
+                            <p>The year witnessed efforts to detect and contain diseases such as influenza A (H1N1)pdm09, Middle East respiratory syndrome coronavirus, cholera, dengue and viral haemorrhagic fevers in some of the most challenging settings.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2016</div>
+                        <div class="timeline-content">
+                            <h3>How many people died of cancer in 2016?</h3>
+                            <p>
+                                Cancer Facts & Figures 2016 | American Cancer Society
+                                In 2016, there will be an estimated 1,685,210 new cancer cases diagnosed and 595,690 cancer deaths in the US.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2017</div>
+                        <div class="timeline-content">
+                            <h3>prevalence of diabetes in 2017?</h3>
+                            <p>In 2017 there were 9 million people with type 1 diabetes; the majority of them live in high-income countries. Neither its cause nor the means to prevent it are known. </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2018</div>
+                        <div class="timeline-content">
+                            <h3>liver disease?</h3>
+                            <p>
+                                Liver disease accounts for two million deaths annually and is responsible for 4% of all deaths (1 out of every 25 deaths worldwide); approximately two-thirds of all liver-related deaths occur in men. </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-content">
+                            <h3>Covid 19</h3>
+                            <p>
+                                After the WHO chief's statement that the end of COVID-19 is in sight, doctors in India concede but say precautions need to continue. Over 2 years after declaring COVID-19 an international emergency and a pandemic, the World Health Organization (WHO) has expressed optimism about the status of the dreaded coronavirus. </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-content">
+                            <h3>fungus diseases</h3>
+                            <p>
+                                Annually, over 150 million severe cases of fungal infections occur worldwide, resulting in approximately 1.7 million deaths per yea </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3> Ischemic heart disease </h3>
+                            <p>According to the World Health Organization (WHO), chronic diseases are the leading cause of death worldwide. Ischemic heart disease alone was responsible for about 8.89 million deaths in 2019.  </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+      <!--footer section-->
+      <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            
+            <ul class="links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Compressions</a></li>
+              <li><a href="#">Customers</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Collection</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 id="aaa"> Explore</h4>
+            <ul class="links">
+              <li><a href="#">Free Designs</a></li>
+              <li><a href="#">Latest Designs</a></li>
+              <li><a href="#">Themes</a></li>
+              <li><a href="#">Popular Designs</a></li>
+              <li><a href="#">Art Skills</a></li>
+              <li><a href="#">New Uploads</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 id="aaa">Legal</h4>
+            <ul class="links">
+              <li><a href="#">Customer Agreement</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Media Kit</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 id="aaa">Newsletter</h4>
+            <p>
+              Subscribe to our newsletter for a weekly dose
+              of news, updates, helpful tips, and
+              exclusive offers.
+            </p>
+            <form action="#">
+              <input type="text" placeholder="Your email" required>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+            <div class="icons">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+      </div>
+    </section>
+    
+</body>
+<script src="Style.js"></script>
+</html>

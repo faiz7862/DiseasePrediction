@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Bed Shop is dedicated to improving our customer's quality of life
+    by providing quality sleep with our affordable luxury beds for sale."
+    />
+    <meta
+      name="keywords"
+      content="bed, matters, bed frames, bed store, bedroom, html, css, javascript, js"
+    />
+    <meta name="author" content="Shahram Shakiba" />
+
+    <!-- RemixIcon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.3.0/remixicon.css"
+      integrity="sha512-0JEaZ1BDR+FsrPtq5Ap9o05MUwn8lKs2GiCcRVdOH0qDcUcCoMKi8fDVJ9gnG8VN1Mp/vuWw2sMO0SQom5th4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/static/stylebook.css" />
+    <title>Doctor Details</title>
+  </head>
+  <body>
+    <!--===================$ HEADER $===================-->
+    <header>
+      <!------------ NavBar ----------->
+      <nav class="navbar">
+        <div class="nav-center container">
+          <!-- Hamburger Menu -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <div class="nav-list-center">
+            <ul class="nav-list">
+              <li>Home </li>
+              <li>Doctors</li>
+            </ul>
+          </div>
+
+          <h1 class="nav-title">Services</h1>
+
+          <div class="nav-list-center">
+            <ul class="nav-list">
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <!--# shopping-cart #-->
+              <div class="cart-btn">
+                <span class="nav-icon">
+                  <i class="ri-shopping-cart-line"></i>
+                </span>
+                <div class="cart-items">0</div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--===================$ MAIN $===================-->
+    <main>
+      <!-------# Search Container #------->
+      <section class="">
+        <div class="search-container">
+          <div class="search-border container">
+            <i class="search-icon ri-search-2-line"></i>
+            <input class="search" type="search" placeholder="Search isease Name " />
+          </div>
+        </div>
+
+        <!-----------# Doctors List #---------->
+        <div class="">
+          <div class="products">
+            <h2 class="section-title">Doctors List</h2>
+
+            <div class="container">
+              <div class="products-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--===================$ FOOTER $===================-->
+    <footer>
+      <!-- FOOTER -->
+      <section class="footer">
+        <div class="author-container container">
+          <span>
+            <i class="ri-user-3-line"></i>
+            <p>Created:Faiz Akram <a/p>
+          </span>
+          <span>
+            <i class="ri-mail-send-line"> </i>
+            <a class="mail" href="mdfaizakram552003@gmail.com"
+              >Faiz Akram
+>
+          </span>
+          <!-- social media -->
+          <div class="social-media">
+            <div class="social-icon">
+              <a href="https://github.com/faiz7862 ">
+                <i class="ri-github-line"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/faiz-akram-412147232/">
+                <i class="ri-linkedin-box-line"></i>
+              </a>
+
+              <a href="https://www.instagram.com/faiz_akram006/">
+                <i class="ri-instagram-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!--==============$ Modal - Cart Section $=============-->
+    <section class="cart-modal">
+      <div class="backdrop"></div>
+
+      <div class="cart">
+        <!--# cart-header #-->
+        <h3 class="cart-title">You Are Connnected to a Specialist Doctor</h3>
+
+        <!--# cart-body #-->
+        <div class="cart-content">
+         
+        </div>
+
+        <!--# cart-footer #-->
+        <div class="cart-footer">
+          <div class="">
+            <span class="cart-total">Total Doctor Connected: 90</span>
+          </div>
+          <div class="">
+            <button class="btn clear-cart">Clear Your Information</button>
+            <button onclick="conform" class="btn cart-item-confirm">Conform Your Data</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/static/app.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="static\Products.js"></script>
+    <script>
+    import { someFunction } from '/static/Products.js'; // Correct relative path
+ </script>
+ <script type="module" src="{{ url_for('static', filename='staticProducts.js') }}"></script>
+
+ <script type="module" src="{{ url_for('static', filename='static\Products.js') }}"></script>
+
+
+ <script type="module" src="{{ url_for('static', filename='static/Products.js') }}"></script>
+
+
+
+  </body>
+
+
+  
+
+</html>

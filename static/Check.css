@@ -1,0 +1,72 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.main_heading{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 45px;
+  color: rgb(0, 0, 0);
+}
+.check_main{
+  margin: auto;
+  height: 1200px;
+  width: 800px;
+  border: 3px solid #FFFFFF;
+  border-radius: 7%;
+  background-color: aliceblue;
+}
+.p_check{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: brown;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.symptom_class{
+  padding-left: 50px;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: rgb(142, 14, 88);
+
+}
+.check_submit{
+  
+  border-radius: 15%;
+  background-color: cyan;
+  font-size: 20px;
+  height: 40px;
+  width: 120px;
+  color: black;
+}
+.select_value{
+  width: 520px;
+}
+
+.bottom{
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  background: #0abecaea;
+  transition: 0.2s ease;
+
+}
+
+
+.alert{
+  width: 100%;
+  background: rgb(0, 255, 106);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  display: none;
+}

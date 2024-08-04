@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <link rel="stylesheet" href="/static/weather.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Feedback.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="unpkg.com_swiper@8.4.7_swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/static/Style.css">
+
+    <!-- BOOTSTRAP CDN Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="/static/Feedback.css">
+</head>
+
+<body>
+<section>
+  <nav>
+    <div class="logo">
+       <img src="/static/imghome/logo copy.png" alt="" width="140px" height="90px"/>
+     
+    </div>
+    <div class="menu" style="width: 80%;"> 
+     <ul>
+      <li><a href="{{url_for('index')}}">Home</a></li>
+                    <li><a href="{{url_for('Check')}}">Check Disease</a></li>
+                    <li><a href="{{url_for('About')}}">About us</a></li>
+                    <li><a href="{{url_for('Feedback')}}">Feedback</a></li>
+                    <li><a href="{{url_for('weather')}}">Weather Dashboard</a></li>
+                <li><a href="{{url_for('diseasse_analysis')}}">Disease Analysis</a></li>
+
+          <button class="signup_button" style="border-radius: 15%;background-color: aqua;font-size: medium;height: 40px;width: 120px;color: black;">
+            <a href="{{url_for('Signup')}}" style="text-decoration:none;" >Sign Up</a>
+     </button>
+     </ul>
+    </div>
+   </nav>
+</section>
+    <section id="form-section">
+        <h1 class="h1-tag" style="background-color: aliceblue;">Your Feedback Is important For Us</h1>
+        <h1 class="alert">your messege is sent</h1>
+        <form class="form-content-section" action="" id="contactform">
+            <div class="form-group">
+                <label for="exampleInputText">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp" placeholder="Enter email">
+                
+            </div>
+            <div class="form-group">
+                <label for="exampleInputText">Contact Number</label>
+                <input type="text" class="form-control" id="contact">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Messege</label>
+                <textarea class="form-control" id="msgContent" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary myclass" >Post Comment</button>
+        </form>
+    </section>
+
+<br/><br/>
+     <!--footer section-->
+     <section class="footer" >
+      <div class="footer-row" >
+        <div class="footer-col">
+          
+          <ul class="links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Compressions</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Collection</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 id="aaa"> Explore</h4>
+          <ul class="links">
+            <li><a href="#">Free Designs</a></li>
+            <li><a href="#">Latest Designs</a></li>
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Popular Designs</a></li>
+            <li><a href="#">Art Skills</a></li>
+            <li><a href="#">New Uploads</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 id="aaa">Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Media Kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 id="aaa">Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+          <div style="display:inline-block;border-radius: 15%;">
+              <div style="display: flex;">
+                <form action="#">
+                  <input type="text" placeholder="Your email" required style="background-color: white;">
+                  <button type="submit" style="background-color: cyan;">SUBSCRIBE</button>
+                </form>
+              </div>
+          </div>
+            <div class="icons">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </div>
+    </div>
+  </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="/static/Feeback.js"></script>
+
+</body>
+
+</html>

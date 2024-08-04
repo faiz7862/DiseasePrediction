@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <!-- BOOTSTRAP CDN Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="/static/Feedback.css">
+</head>
+
+<body>
+
+    <section id="form-section">
+        <h1 class="h1-tag">Your Feedback Is important For Us</h1>
+        <h1 class="alert">your messege is sent</h1>
+        <form class="form-content-section" action="" id="contactform">
+            <div class="form-group">
+                <label for="exampleInputText">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp" placeholder="Enter email">
+                
+            </div>
+            <div class="form-group">
+                <label for="exampleInputText">Contact Number</label>
+                <input type="text" class="form-control" id="contact">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Messege</label>
+                <textarea class="form-control" id="msgContent" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary myclass">Post Comment</button>
+        </form>
+    </section>
+
+<br/><br/>
+    <div class="footer">
+
+        <div class="content">
+          <div class="services">
+            <h4>Services</h4>
+            <p><a href="#">Diseases prediction</a></p>
+            <p><a href="#">customer support</a></p>
+            <p><a href="#">help line no +9508664444</a></p>
+            <p><a href="#">predict</a></p>
+          </div>
+          <div class="social-media">
+            <h4>Social</h4>
+            <p>
+              <a href="#"
+                ><i class="fab fa-linkedin"></i> Linkedin</a
+              >
+            </p>
+            <p>
+              <a href="#"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+            </p>
+            <p>
+              <a href="https://github.com/farazc60"
+                ><i class="fab fa-github"></i> Github</a
+              >
+            </p>
+            <p>
+              <a href="https://www.facebook.com/codewithfaraz"
+                ><i class="fab fa-facebook"></i> Facebook</a
+              >
+            </p>
+            <p>
+              <a href="https://www.instagram.com/codewithfaraz"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+            </p>
+          </div>
+          <div class="links">
+            <h4>Quick links</h4>
+            <p><a href="#">Home</a></p>
+            <p><a href="#">About</a></p>
+            <p><a href="#">Blogs</a></p>
+            <p><a href="#">Contact</a></p>
+          </div>
+          <div class="details">
+            <h4 class="address">Address</h4>
+            <p>
+             jiet group of institution <br />
+             mogra pali road,342013
+            </p>
+            <h4 class="mobile">Mobile</h4>
+            <p><a href="#">+91-950866444</a></p>
+            <h4 class="mail">Email</h4>
+            <p><a href="#">ak0259421@@gmail.com</a></p>
+          </div>
+        </div>
+        <footer>
+          <hr />
+          © 2022 codewithAbhishek.
+        </footer>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="Feeback.js"></script>
+
+</body>
+
+</html>

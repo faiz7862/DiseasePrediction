@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="/static/diseases_analysis.css">
+    <link rel="stylesheet" href="/static/weather.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Feedback.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="unpkg.com_swiper@8.4.7_swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/static/Style.css">
+
+
+    <!-- BOOTSTRAP CDN Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="/static/Feedback.css">
+</head>
+
+<body>
+    <header>
+        <section>
+            <nav>
+                <div class="logo">
+                <img src="/static/imghome/logo copy.png" alt="" width="140px" height="90px"/>
+                
+                </div>
+                <div class="menu" style="width: 80%;"> 
+                <ul>
+                    <li><a href="{{url_for('index')}}">Home</a></li>
+                    <li><a href="{{url_for('Check')}}">Check Disease</a></li>
+                    <li><a href="{{url_for('About')}}">About us</a></li>
+                    <li><a href="{{url_for('Feedback')}}">Feedback</a></li>
+                    <li><a href="{{url_for('weather')}}">Weather Dashboard</a></li>
+                <li><a href="{{url_for('diseasse_analysis')}}">Disease Analysis</a></li>
+                <button class="signup_button"
+                style="border-radius: 15%;background-color: aqua;font-size: medium;height: 40px;width: 120px;color: black;">
+                <a href="{{url_for('Signup')}}" style="text-decoration:none;">Sign Up</a>
+              </button>
+                </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <br/><br/>
+     <!--WRITE CODE FOR THE DISEASE PREDICTION-->
+     <div class="cls_DAbtn" align="center">
+        <button class="signup_button" style="border-radius: 15%; background-color: #0ebdcac1;font-size: medium;height: 40px;width: 220px;color: black; text-decoration-color: black;">
+            <a href="https://healthheatmapindia.org/idsp" target="_blank" style="text-decoration:none;" >Check Up Analysis</a>
+        </button>
+    </div><br>
+    <!--image slider navigation bootstrap code-->
+    <div class="DA_center">
+        <p>Click on the buttom to see the cases which are affected by the disease in India</p>
+    </div>
+   <div id="includecontent"></div>
+    <!--footer section-->
+    <section class="footer" >
+        <div class="footer-row" >
+            <div class="footer-col">            
+                <ul class="links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Compressions</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Collection</a></li>
+                </ul>
+        </div>
+        <div class="footer-col">
+            <h4 id="aaa"> Explore</h4>
+            <ul class="links">
+                <li><a href="#">Free Designs</a></li>
+                <li><a href="#">Latest Designs</a></li>
+                <li><a href="#">Themes</a></li>
+                <li><a href="#">Popular Designs</a></li>
+                <li><a href="#">Art Skills</a></li>
+                <li><a href="#">New Uploads</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 id="aaa">Legal</h4>
+            <ul class="links">
+                <li><a href="#">Customer Agreement</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">GDPR</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Media Kit</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 id="aaa">Newsletter</h4>
+            <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+            </p>
+            <div style="display:inline-block;border-radius: 15%;">
+                <div style="display: flex;">
+                    <form action="#">
+                        <input type="text" placeholder="Your email" required style="background-color: white;">
+                        <button type="submit" style="background-color: cyan;">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Specify the path to your external HTML file
+            var externalHtmlFile = "https://healthheatmapindia.org/idsp";
+    
+            // Get the reference to the div element
+            var includecontent = document.getElementById("includecontent");
+    
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+    
+            // Set up the GET request for the external HTML file
+            xhr.open("GET", externalHtmlFile, true);
+    
+            // Define the callback function to handle the response
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // If the request was successful, inject the HTML content into the div
+                    includecontent.innerHTML = xhr.responseText;
+                } else {
+                    // If there was an error, you can handle it accordingly
+                    console.error("Error loading external HTML file:", xhr.statusText);
+                }
+            };
+    
+            // Send the GET request
+            xhr.send();
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="Feeback.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>

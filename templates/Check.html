@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="unpkg.com_swiper@8.4.7_swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/static/Style.css">
+  <link rel="stylesheet" href="/static/Check.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="/static/Check.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+  <style>
+    a{
+      text-decoration: none;
+      color: rgba(15, 15, 187, 0.639);
+    }
+    p {
+            text-align: center;
+            font-weight: bold; 
+            color: red;
+        }
+
+    #prediction-form{
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+
+    
+  </style>
+	
+  <title>Disease prediction</title>
+</head>
+
+
+<body>
+  <div>
+      <header class="site-header clearfix" style="height: 100px;">
+        <nav>
+        <div class="logo">
+            <img src="/static/imghome/logo copy.png" alt="" width="140px" height="90px"/>          
+        </div>
+        <div class="menu" style="width: 80%;"> 
+          <ul>
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('Check')}}">Check Disease</a></li>
+            <li><a href="{{url_for('About')}}">About us</a></li>
+            <li><a href="{{url_for('Feedback')}}">Feedback</a></li>
+            <li><a href="{{url_for('weather')}}">Weather Dashboard</a></li>
+        <li><a href="{{url_for('diseasse_analysis')}}">Disease Analysis</a></li>
+
+          <button class="signup_button" style="border-radius: 10px;background-color: aqua;font-size: medium;height: 40px;width: 120px;color: black;">
+            <a href="{{url_for('Signup')}}" style="text-decoration:none;" >Sign Up</a>
+          </button>
+          </ul>
+        </div>
+        </nav>
+        <section>
+               
+        </section>      
+      </header>
+   </div>
+
+
+  <div class="check_main" >    
+    <a href="Home.html"><h1 class="main_heading">Diseases Prediction</h1></a>
+    <marquee>To fill the input field check the diseases</marquee>
+    <hr/>
+    <p class="p_check">
+      Important Note:- <br>
+      From viral fever to asthma, discover the various signs and indications of various diseases and explore their causes
+    </p>
+    <div class="form_class">
+      <form action="/predict" method="post" id="prediction-form">
+        <label for="symptom1">Symptoms  1  : </label>
+        <select name="symptom1">
+          {% for option in options %}
+              <option value="{{ option }}">{{ option }}</option>
+          {% endfor %}
+      </select>
+      <br>
+      
+      <br>
+      <label for="symptom2">Symptoms 2 :</label>
+      <select name="symptom2">
+        {% for option in options %}
+            <option value="{{ option }}">{{ option }}</option>
+        {% endfor %}
+    </select>
+    <br>
+
+
+      <br>
+      <label for="symptom3">Symptoms 3 :</label>
+      <select name="symptom3">
+        {% for option in options %}
+            <option value="{{ option }}">{{ option }}</option>
+        {% endfor %}
+    </select>
+
+    <br>
+      <br>
+      <label for="symptom4">Symptoms 4 :</label>
+      <select name="symptom4">
+        {% for option in options %}
+            <option value="{{ option }}">{{ option }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <label for="symptom5">Symptoms 5 :</label>
+      <select name="symptom5">
+        {% for option in options %}
+            <option value="{{ option }}">{{ option }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <label for="symptom6">Symptoms 6 :</label>
+      <select name="symptom6">
+        {% for option in options %}
+            <option value="{{ option }}">{{ option }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <label for="symptom7">Symptoms 7 :</label>
+      <select name="symptom7">
+        {% for option in options %}
+            <option value="{{ option }}">{{ option }}</option>
+        {% endfor %}
+    </select>
+
+  
+     <br>
+      
+      <br>
+      
+      <br>
+      <hr>
+      <br>
+      <div align="center">
+        <button class="bottom" type="button" onclick="predict()">Predict</button>
+        <br/><br>
+
+        </div>
+
+        <div id="result-container">
+          {% if result %}
+              <p>Result: {{ result.final_prediction }}</p>
+          {% endif %}
+      </div>
+        <br><br><br>
+        <div align="center">
+          <button class="bottom" type="button" onclick="predict1()">Precaution</button>
+          <br/><br>
+  
+          </div>
+  
+          <div id="result-container1">
+            
+              {% if result %}
+              <p>Result: {{ result1.fetch_precautions }}</p>
+              {% endif %}
+        </div>
+
+        <!-- <h5>Precautions : <id="Precaution_1" ><h6 class="alert">bath twice ,use detol or neem in bathing water, keep infected area dry, use clean cloths</h6></h5><br> -->
+        <!-- <h5>Precaution 2 : <id="Precaution_2" ><h6 class="alert1">use detol or neem in bathing water</h6></h5><br>
+        <h5>Precaution 3 : <id="Precaution_3" ><h6 class="alert2">keep infected area dry</h6></h5><br>
+        <h5>Precaution 4 : <id="Precaution_4" ><h6 class="alert3">use clean cloths</h6></h5><br>
+<br> -->
+<br>
+<br>
+<div align="center">
+  <button style="background-color: aqua;height: 45px; width: 210px; border: 2px solid white;border-radius: 12px;" type="button" ><a href="{{url_for('indexx')}}" >Book your appoinment</a></button>
+  <br/><br>
+
+  </div>
+  </form>    
+  
+    </div>  
+</div>
+<br>
+<br>
+    <!--footer section-->
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          
+          <ul class="links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Compressions</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Collection</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 id="aaa"> Explore</h4>
+          <ul class="links">
+            <li><a href="#">Free Designs</a></li>
+            <li><a href="#">Latest Designs</a></li>
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Popular Designs</a></li>
+            <li><a href="#">Art Skills</a></li>
+            <li><a href="#">New Uploads</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 id="aaa">Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Media Kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 id="aaa">Newsletter</h4>
+          <p>/
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+          <div style="display:inline-block;border-radius: 15%;">
+              <div style="display: flex;">
+                <form action="#">
+                  <input type="text" placeholder="Your email" required style="background-color: white;">
+                  <button type="submit" style="background-color: cyan;">SUBSCRIBE</button>
+                </form>
+              </div>
+          </div>
+            <div class="icons">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </div>
+    </div>
+  </section>
+
+
+  <script>
+    function predict() {
+    var form = document.getElementById("prediction-form");
+    var formData = new FormData(form);
+
+    // Convert FormData to a plain object
+    var formDataObject = {};
+    formData.forEach(function (value, key) {
+        formDataObject[key] = value;
+    });
+
+    $.ajax({
+        type: 'POST',
+        url: '/predict',
+        data: formDataObject,
+        success: function (result) {
+            // Update the result in the resultDiv
+            $('#result-container').html('<p> You may suffering from : ' + result.final_prediction + '</p>');
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    })};
+
+
+    function predict1() {
+    var form = document.getElementById("prediction-form");
+    var formData = new FormData(form);
+
+    // Convert FormData to a plain object
+    var formDataObject = {};
+    formData.forEach(function (value, key) {
+        formDataObject[key] = value;
+    });
+
+    $.ajax({
+        type: 'POST',
+        url: '/predict',
+        data: formDataObject,
+        success: function (result1) {
+            // Update the result in the resultDiv
+            $('#result-container1').html('<p> You may suffering from : ' + result1.fetch_precautions + '</p>');
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+
+  
+
+}
+
+</script>
+
+</body>
+</html>

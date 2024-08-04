@@ -1,0 +1,9 @@
+.DA_center{
+    margin: auto;
+    width: 60%;
+    height: 80px;
+}
+
+.DA_center p{
+    text-align: center;
+}

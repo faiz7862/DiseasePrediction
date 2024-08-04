@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <script type="module" src="/static/Signup.js" defer></script>
+  <script type="module" src="/static/Signin.js" defer></script>
+  <!-- font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/static/Signup.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="/static/imghome/logo copy.png" alt="" width="140px" height="90px" />
+
+    </div>
+    <div class="menu" style="width: 80%;">
+      <ul>
+        <li><a href="{{url_for('index')}}">Home</a></li>
+                    <li><a href="{{url_for('Check')}}">Check Disease</a></li>
+                    <li><a href="{{url_for('About')}}">About us</a></li>
+                    <li><a href="{{url_for('Feedback')}}">Feedback</a></li>
+                    <li><a href="{{url_for('weather')}}">Weather Dashboard</a></li>
+                <li><a href="{{url_for('diseasse_analysis')}}">Disease Analysis</a></li>
+        <button class="signup_button"
+          style="border-radius: 15%;background-color: aqua;font-size: medium;height: 40px;width: 120px;color: black;">
+          <a href="{{url_for('Signup')}}" style="text-decoration:none;">Sign Up</a>
+        </button>
+      </ul>
+    </div>
+  </nav>
+  <div class="Form-box">
+    <form class="Login-form">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" required id="email" value="" />
+        <label>Email</label>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" required id="password"/>
+        <label>Password</label>
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      
+      <button type="submit" class="submit-btn" id="login">Submit</button>
+      <h5 class="Register-btn">Dont have an account ? Register</h5>
+    </form>
+
+    <!--new form-->
+    <form class="Register-form">
+      <h1>Register</h1>
+      <div class="input-box">
+        <input type="text"  id="Username" value=""  required/>
+        <label>Username</label>
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="email"  id="email" value="" required/>
+        <label>Email</label>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Enter your Password" />
+        <label>Password</label>
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="register-checkbox" />
+        <label for="register-checkbox">I agree to the terms & conditions</label>
+      </div>
+      <button type="submit" class="submit-btn" value="submit" id="submit" >Register</button>
+      <h5 class="Login-btn">Register before ? Login</h5>
+    </form>
+  </div>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <section id="new">
+    <div class="footer">
+
+      <div class="content">
+        <div class="services">
+          <h4>Services</h4>
+          <p><a href="#">Diseases prediction</a></p>
+          <p><a href="#">customer support</a></p>
+          <p><a href="#">help line no +9508664444</a></p>
+          <p><a href="#">predict</a></p>
+        </div>
+        <div class="social-media">
+          <h4>Social</h4>
+          <p>
+            <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+          </p>
+          <p>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+          </p>
+          <p>
+            <a href="https://github.com/farazc60"><i class="fab fa-github"></i> Github</a>
+          </p>
+          <p>
+            <a href="https://www.facebook.com/codewithfaraz"><i class="fab fa-facebook"></i> Facebook</a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/codewithfaraz"><i class="fab fa-instagram"></i> Instagram</a>
+          </p>
+        </div>
+        <div class="links">
+          <h4>Quick links</h4>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">About</a></p>
+          <p><a href="#">Blogs</a></p>
+          <p><a href="#">Contact</a></p>
+        </div>
+        <div class="details">
+          <h4 class="address">Address</h4>
+          <p>
+            jiet group of institution <br />
+            mogra pali road,342013
+          </p>
+          <h4 class="mobile">Mobile</h4>
+          <p><a href="#">+91-950866444</a></p>
+          <h4 class="mail">Email</h4>
+          <p><a href="#">ak0259421@@gmail.com</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src="/static/Signup.js"></script>
+</body>
+</html>

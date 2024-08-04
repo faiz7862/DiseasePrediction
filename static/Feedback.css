@@ -1,0 +1,184 @@
+btn btn-primary myclassbody {
+    font-family: 'Roboto Slab', serif;
+    background: #DAE2F8;
+   
+  
+}
+
+
+nav{
+  width: 100%; height: 100px;
+  background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
+  /*background-color:  red;*/
+  display: flex; color: white;
+  
+}
+
+.logo{
+  width: 50%;
+  height: 100px;
+}
+
+.logo h1{
+  line-height: 100px;
+  padding-left: 50px;
+}
+
+.menu{
+  width: 50%; height: 100px;
+}
+.menu ul{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:  center;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  font-size: 12px;
+  color: wheat;
+}
+.menu ul li{
+  list-style: none;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.h1-tag{
+    text-align: center;
+   
+    margin-top: 4%;
+}
+.alert{
+    width: 100%;
+    
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
+.form-content-section{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+@media screen and (max-width: 600px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 800px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .form-group{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .form-group{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .btn-primary{
+        margin-left: 20px;
+    }
+}
+.myclass{
+    border-radius: 20px;
+}
+.footer {
+    background-color: bla;
+    color: #fefefe;
+    margin-top: 80px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer .heading {
+    color: #fefefe;
+    max-width: 1010px;
+    width: 90%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+  }
+  
+  .footer .content p {
+    margin-bottom: 1.3rem;
+  }
+  
+  .footer .content a {
+    text-decoration: none;
+    color: #fefefe;
+  }
+  
+  .footer .content a:hover {
+    border-bottom: 1px solid #971717;
+  }
+  
+  .footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 19px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  footer hr {
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    .footer .content {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content,
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+      position: unset;
+    }
+  }
+  
+  
